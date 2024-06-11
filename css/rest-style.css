@@ -1,0 +1,389 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    position: fixed;
+    z-index: 1000000;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+
+/* Appliquer Roboto pour le texte général */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(235, 235, 235);
+}
+
+/* Appliquer Shrikhand pour le logo */
+.logo-container img {
+    font-family: 'Shrikhand', cursive;
+}
+
+/* Appliquer Shrikhand pour les titres */
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.flèche {
+    position: fixed;
+    font-size: 25px;
+    top: 20px;
+    left: 25px;
+}
+
+.logo-container {
+    text-align: center;
+    font-family: 'Shrikhand'; 
+}
+
+.logo-container img {
+    width: 170px;
+   
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    z-index: -1;
+}
+
+.image img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;   
+}
+
+.Main {
+    z-index:10;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    padding: 10px;
+}
+
+.titre-rest {
+    position: relative;
+}
+
+.titre-rest h1 {
+    font-size: 35px;
+    padding-left: 20px;
+}
+
+.coeur {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    font-size: 24px; 
+    color:black; /* Couleur initiale du cœur de devant */
+    transition: color 0.3s ease, opacity 0.3s ease;
+
+    
+}
+.coeur .fa-regular{
+    background: #ebebeb;
+  
+}
+.coeur-color {
+    position: absolute ;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px; /* la taille de l'icône */
+   
+}
+.coeur-color .fa-solid{
+    background: linear-gradient(0deg , #FF79DA, #9356DC); /* Dégradé de couleurs */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+.coeur:hover {
+    color: transparent; /* Rendre le cœur de devant transparent au survol */
+    opacity: 0;
+}
+
+.liste-entrées li,
+.liste-plats li,
+.liste-desserts li {
+    display: flex;
+    list-style: none;
+    border-radius: 20px; /* Coins arrondis */
+    background-color: white;
+    border: 1px solid beige; /* Bordure */
+    padding-left: 10px;
+    margin-bottom: 15px;
+    opacity: 0; /* Initialement caché */
+    animation: fadeIn 1s forwards; /* Animation d'apparition */
+}
+.liste-entrées li:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.liste-entrées li:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.liste-entrées li:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.liste-entrées li:nth-child(4) {
+    animation-delay: 4s;
+}
+
+.liste-plats li:nth-child(1) {
+    animation-delay: 5s;
+}
+
+.liste-plats li:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.liste-plats li:nth-child(3) {
+    animation-delay: 7s;
+}
+
+.liste-desserts li:nth-child(1) {
+    animation-delay: 8s;
+}
+
+.liste-desserts li:nth-child(2) {
+    animation-delay: 9s;
+}
+
+.liste-desserts li:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.Entrées, .Desserts, .Plats {
+    display: flex;
+    flex-direction: column;
+    margin-left:-20px;
+}
+.Entrées h2,
+.Plats h2,
+.Desserts h2 {
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.liste-entrées h3,
+.liste-plats h3,
+.liste-desserts h3 {
+    margin-bottom: -10px;
+}
+
+.liste-entrées p {
+    text-overflow: ellipsis;
+}
+
+.texte-liste {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.texte-liste h3, .texte-liste p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.le-prix {
+    width: 60px;
+    margin-bottom: 5px;
+    padding-top: 46px;
+}
+
+.le-check {
+    position: relative;
+    width: 0px;
+    opacity: 0;
+    padding-top: 35px;
+    padding-left: 20px;
+    background-color: #99E2D0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;   
+    transition: all 1s ease-out;
+}
+
+.check {
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+
+.liste-entrées li:hover .le-check,
+.liste-plats li:hover .le-check,
+.liste-desserts li:hover .le-check {
+    opacity: 1;
+    width: 50px;
+}
+
+.check i {
+    color: #99E2D0; 
+}
+
+.button-commande {
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px rgba(0, 0, 0, 0.534);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.Commande {
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom , #FF79DA, #9356DC); /* Dégradé de couleurs */
+    color: white;
+    border: none;
+}
+.Commande:hover {
+    background: linear-gradient(to bottom,rgb(250, 147, 221), rgb(164, 105, 236)); /* Couleurs plus claire au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
+}
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(102, 101, 101);
+    padding: 10px;
+}
+
+.titre-footer {
+    font-family: 'Shrikhand'; 
+    color: white;
+    padding-left: 18px;
+}
+
+.footer-containers a {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-containers p {
+    list-style: none;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.footer-containers p i {
+    padding-right: 10px;
+    color: white;
+}
+
+
+/****** Media queries ***********/
+/* Desktop (1001px et plus) */
+@media (min-width: 1001px) {
+    
+body html header {
+    width: 100%;
+}
+body{
+    background-color: white;
+}
+    
+.main-container {
+    width: 100%;
+    min-width: 1001px;
+    max-width: none;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+.Main {
+    width: 80%;
+    margin-left: 10%;
+}
+.image img {
+    width: 100%;
+}
+.titre-rest h1 {
+    font-size: 25px;
+    padding-left: 17%;
+}
+.coeur {
+    bottom: 5px;
+    right: 41%;
+}
+.coeur-color {
+    bottom: 5px;
+    right: 41%;
+}
+.menus{
+    margin-left: 15%;
+}
+.Entrées h2,
+.Plats h2,
+.Desserts h2 {
+    padding-left: 40px;
+}
+.button-commande {
+    margin-right: 22%;
+}
+
+.Entrées, .Plats, .Desserts {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.texte-liste h3, .texte-liste p {
+    font-size: 13px;
+}
+
+.le-prix {
+    font-size: 13px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse; /* Inverse l'ordre des éléments */
+}
+
+.footer-containers {
+    display: flex;
+    font-size: 12px;
+    white-space: nowrap; /* Empêche le passage à la ligne */
+    margin-top: 20px;
+    margin-right: 30px;
+}
+.titre-footer {
+    font-size: 12px;
+    margin-top: 16px;
+    margin-right: 25px;
+}
+}
