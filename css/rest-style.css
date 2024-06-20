@@ -187,9 +187,20 @@ h1 {
 .Entrées h2,
 .Plats h2,
 .Desserts h2 {
+    position: relative;
     margin-left: 20px;
     padding-top: 10px;
     padding-left: 20px;
+}
+.soulignement{
+    position: absolute;
+    
+    margin-top: 62px;
+    width: 60px;
+    height: 4px;
+    background-color: #99E2D0;
+    margin-left: 40px;
+
 }
 
 .liste-entrées h3,
@@ -351,6 +362,15 @@ body{
 .Plats h2,
 .Desserts h2 {
     padding-left: 40px;
+}
+.soulignement{
+    position: absolute;
+    margin-top: 62px;
+    width: 60px;
+    height: 4px;
+    background-color: #99E2D0;
+    margin-left: 60px;
+
 }
 .button-commande {
     margin-right: 22%;

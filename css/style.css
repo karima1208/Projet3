@@ -100,7 +100,7 @@ body.loaded .loader {
     box-sizing: border-box; /* Inclure le padding dans la largeur */
     box-shadow: 0px 0px 10px rgba(19, 18, 18, 0.829); /* Ajouter une ombre */
 }
-.local-icon {
+.local-icon { 
     font-size: 24px;
     margin-right: 10px;
 }
@@ -165,6 +165,10 @@ body.loaded .loader {
     font-size: 20px; /* Taille de l'icône */
     color: gray;
     padding: 15px;
+}
+.ma-liste .fa-sharp {
+    color: #9356DC;
+
 }
 .numero1, .numero2, .numero3 {
     position: absolute;
