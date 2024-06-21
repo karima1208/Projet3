@@ -191,6 +191,7 @@ h1 {
     margin-left: 20px;
     padding-top: 10px;
     padding-left: 20px;
+    font-weight: normal; /* Retire le gras */
 }
 .soulignement{
     position: absolute;
