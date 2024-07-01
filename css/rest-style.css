@@ -93,33 +93,27 @@ h1 {
     z-index: 10;
     font-size: 24px; 
     color:black; /* Couleur initiale du cœur de devant */
-    transition: color 0.3s ease, opacity 0.3s ease;
-
-    
+    transition: color 0.3s ease, opacity 0.3s ease;   
 }
 .coeur .fa-regular{
     background: #ebebeb;
-  
 }
 .coeur-color {
     position: absolute ;
     bottom: 10px;
     right: 10px;
     font-size: 24px; /* la taille de l'icône */
-   
 }
 .coeur-color .fa-solid{
     background: linear-gradient(0deg , #FF79DA, #9356DC); /* Dégradé de couleurs */
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
 }
 .coeur:hover {
     color: transparent; /* Rendre le cœur de devant transparent au survol */
     opacity: 0;
 }
-
 .liste-entrées li,
 .liste-plats li,
 .liste-desserts li {
@@ -266,7 +260,7 @@ h1 {
 .button-commande {
     display: flex;
     justify-content: center;
-    box-shadow: 20px rgba(0, 0, 0, 0.534);
+    box-shadow: 20px 0px 0px rgba(0, 0, 0, 0.5);
     margin-top: 50px;
     margin-bottom: 20px;
 }
